@@ -14,4 +14,5 @@ Os scripts foram criados para a distribuição Ubuntu, sendo a versão 20.04 LTS
 
 ### Comando para executar o Playbook Ansible
 > ansible-playbook tools/ubuntu_devops.yaml --ask-become-pass
-Insira sua senha com permissão root para executar as ações descritas no script
+
+
