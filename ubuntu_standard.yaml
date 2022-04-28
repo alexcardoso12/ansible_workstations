@@ -1,0 +1,113 @@
+--- #Parametrizar Workstation Ubuntu Standard
+- name: Preparing Workstation
+  hosts: localhost
+  connection: local
+  tasks:
+
+    - name: Installing Linux Apps
+      become: true
+      apt:
+        name: '{{ item }}'
+        install_recommends: yes
+        state: present
+      loop:
+          - vim
+          - htop
+          - curl
+          - wget
+          - ncdu
+          - tree
+          - apt-transport-https
+          - ca-certificates
+          - gnupg
+          - python3-pip
+          - make
+          - git
+          - bash-completion
+          - gnupg-agent
+          - zsh
+          - flameshot
+          - fonts-hack
+          - tilix
+          - virtualbox
+          - mlocate
+          - krita
+          - jq
+          - mtr
+          - traceroute
+          - nmap
+          - forticlient
+
+    - block:
+      - name: Install Google Key
+        become: true
+        apt_key: 
+          url: 'https://dl.google.com/linux/linux_signing_key.pub'
+          state: present
+      - name: Install Google Repository
+        become: true
+        apt_repository:
+          repo: 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
+          state: present
+          filename: google-chrome
+      - name: Install Google Chrome
+        become: true
+        apt:
+          name: google-chrome-stable
+
+    - block:
+      - name: Adding Peek Repository
+        become: true
+        apt_repository:
+          repo: 'ppa:peek-developers/stable'
+      - name: Install Peek
+        become: true
+        apt:
+          name: peek
+
+    - block:
+      - name: Install obsproject Ubuntu Repo
+        become: true
+        apt_repository:
+          repo: 'ppa:obsproject/obs-studio'
+      - name: Install obs Studio
+        become: true
+        apt:
+          name: obs-studio
+
+    - block:
+      - name: Install Dbeaver 
+        become: true
+        apt_repository:
+          repo: 'ppa:serge-rider/dbeaver-ce'
+      - name: Install dbeaver-ce
+        become: true
+        apt:
+          name: dbeaver-ce
+
+    - block: 
+      - name: Install Brave Key
+        become: true
+        apt_key:
+          url: 'https://brave-browser-apt-release.s3.brave.com/brave-core.asc'
+          state: present
+      - name: Install Brave Repository
+        become: true
+        apt_repository:
+          repo: 'deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main'
+          state: present
+          filename: brave
+      - name: Install Brave Browser
+        become: true
+        apt:
+          name: brave-browser
+
+    - block:
+      - name: Adding Ulauncher Repository
+        become: true
+        apt_repository:
+          repo: 'ppa:agornostal/ulauncher'
+      - name: Install Ulauncher
+        become: true
+        apt:
+          name: ulauncher
