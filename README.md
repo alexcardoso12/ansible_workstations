@@ -13,6 +13,6 @@ Os scripts foram criados para a distribuição Ubuntu, sendo a versão 20.04 LTS
 > git clone https://github.com/alexcardoso12/ansible_workstations.git
 
 ### Comando para executar o Playbook Ansible
-> ansible-playbook tools/ubuntu_devops.yaml --ask-become-pass
+> ansible-playbook ansible_workstations/ubuntu_devops.yaml --ask-become-pass
 
 
