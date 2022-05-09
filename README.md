@@ -6,7 +6,7 @@
 
 * [PREPARAÇÃO](#preparação)
 * [INSTALAÇÃO](#instalação-do-ansible-git-e-unzip-arrowforward)
-* [CLONAGEM REPOSITOORIO](#clonar-o-repositório-arrowforward)
+* [CLONAGEM DE REPOSITOORIO](#clonar-o-repositório-arrowforward)
 * [EXECUÇÃO DO PLAYBOOK](#comando-para-executar-o-playbook-ansible-arrowforward)
 ___
 ### PREPARAÇÃO
@@ -16,7 +16,7 @@ Os scripts foram criados para a distribuição Ubuntu, sendo a versão 20.04 LTS
 
 ### INSTALAÇÃO DO ANSIBLE, GIT e UNZIP :arrow_forward:
 ```bash
->sudo apt update && sudo apt install ansible unzip git -y
+> sudo apt update && sudo apt install ansible unzip git -y
 ```
 
 ### CLONAR O REPOSITÓRIO :arrow_forward:
