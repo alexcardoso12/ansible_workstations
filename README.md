@@ -5,16 +5,16 @@
 ### ÍNDICE
 
 * [PREPARAÇÃO](#preparação)
-* [INSTALAÇÃO DO ANSIBLE/GIT/UNZIP](#instalação-do-ansiblegitunzip)
-* [CLONAR O REPOSITÓRIO](#clonar-o-repositório)
-* [COMANDO PARA EXECUTAR O PLAYBOOK ANSIBLE](#comando-para-executar-o-playbook-ansible)
+* [INSTALAÇÃO](#instalação-do-ansible-git-e-unzip-arrowforward)
+* [CLONAGEM REPOSITOORIO](#clonar-o-repositório-arrowforward)
+* [EXECUÇÃO DO PLAYBOOK](#comando-para-executar-o-playbook-ansible-arrowforward)
 ___
 ### PREPARAÇÃO
 Os scripts foram criados para a distribuição Ubuntu, sendo a versão 20.04 LTS utilizada como base. 
  >- A versão ubuntu_devops.yaml possui ferramentas voltadas para Devops e Administradores de Redes
  >- A versão ubuntu_standard.yaml é uma versão light com ferramentas essenciais.  
 
-### INSTALAÇÃO DO ANSIBLE/GIT/UNZIP :arrow_forward:
+### INSTALAÇÃO DO ANSIBLE, GIT e UNZIP :arrow_forward:
 ```bash
 >sudo apt update && sudo apt install ansible unzip git -y
 ```
