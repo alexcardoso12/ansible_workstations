@@ -36,8 +36,7 @@
           - mtr
           - traceroute
           - nmap
-          - forticlient
-
+          
     - block:
       - name: Install Google Key
         become: true
